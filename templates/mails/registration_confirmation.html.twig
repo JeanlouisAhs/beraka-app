@@ -1,0 +1,8 @@
+<h1>Account confimation</h1>
+<p>Hi {{ user.fisrtname }}. Welcome to Beraka</p>
+<p class="">Please click on the link below to confirm your account <br> <br> </p>
+<a href="{{ absolute_url(path('account_verify', {token:token, id: user.id }) ) }}">Confirm your account</a>  <br> <br>
+<p class="">This link is valid until <strong>{{ lifetimeToken }}</strong>  . After this date it will no longer be valid </p>
+
+<p class="">Please don't replay to this email </p>
+

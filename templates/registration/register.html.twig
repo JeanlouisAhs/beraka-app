@@ -1,21 +1,70 @@
-{% extends 'base.html.twig' %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Log in!{% endblock %}</title>
+    <link rel="icon"
+          href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }}
+    {% endblock %}
 
-{% block title %}Register{% endblock %}
+    {% block javascripts %}
+        {{ encore_entry_script_tags('app') }}
+    {% endblock %}
+</head>
+<body>
+<div class="container-fluid vh-100">
+    <div class="row h-100">
+        <div class="col-md-3 bg-dark">
+            <!-- Contenu de la partie droite, si nécessaire -->
+        </div>
+        <div class="col-md-9 ">
+            {% include '_partials/_flash.html.twig'%}
+            <div class="h-100 d-flex align-items-center ms-5">
 
-{% block body %}
-    <h1>Register</h1>
+                {{ form_errors(registrationForm) }}
 
-    {{ form_errors(registrationForm) }}
+                {{ form_start(registrationForm)}}
+                <div class="mb-4 fs-4 ">
+                    Register to  <span class="fw-bolder">  beraka .</span>
+                </div>
+                <div class="row mb-">
+                    <div class="col">
+                        {{ form_row(registrationForm.fisrtname) }}
+                    </div>
+                    <div class="col">
+                        {{ form_row(registrationForm.lastname) }}
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        {{ form_row(registrationForm.email) }}
+                    </div>
+                    <div class="col">
+                        {{ form_row(registrationForm.plainPassword, {
+                            label: 'Password'
+                        }) }}
+                    </div>
+                </div>
 
-    {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.fisrtname) }}
-        {{ form_row(registrationForm.lastname) }}
-        {{ form_row(registrationForm.email) }}
-        {{ form_row(registrationForm.plainPassword, {
-            label: 'Password'
-        }) }}
-        {{ form_row(registrationForm.agreeTerms) }}
+                {{ form_row(registrationForm.agreeTerms, {
+                    label: 'I agree to the terms of service and privacy policy '
+                })}}
 
-        <button type="submit" class="rounded bg-gray-950 hover:bg-gray-900 py-2 px-4 text-white">Register</button>
-    {{ form_end(registrationForm) }}
-{% endblock %}
+                <button type="submit" class="btn btn-dark mt-2 ">Register</button>
+                {{ form_end(registrationForm) }}
+            </div>
+
+
+
+        </div>
+
+    </div>
+</div>
+
+
+
+</body>
+
+</html>

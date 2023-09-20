@@ -23,7 +23,10 @@ class RegistrationFormType extends AbstractType
                 'label' => 'Your firstname',
                 'attr' => [
                     'placeholder' => 'Firstname',
-                    'class' => 'rounded'
+                    'class' => 'form-control'
+                ],
+                'label_attr' => [
+                    'class' => 'form-label'
                 ],
                 'required' => true,
             ])
@@ -31,7 +34,10 @@ class RegistrationFormType extends AbstractType
                 'label' => 'Your lastname',
                 'attr' => [
                     'placeholder' => 'Lastname',
-                    'class' => 'rounded'
+                    'class' => 'form-control'
+                ],
+                'label_attr' => [
+                    'class' => 'form-label'
                 ],
                 'required' => true,
             ])
@@ -39,7 +45,10 @@ class RegistrationFormType extends AbstractType
                 'label' => 'Your email',
                 'attr' => [
                     'placeholder' => 'Email',
-                    'class' => 'rounded'
+                    'class' => 'form-control'
+                ],
+                'label_attr' => [
+                    'class' => 'form-label'
                 ],
                 'required' => true,
 
@@ -59,8 +68,11 @@ class RegistrationFormType extends AbstractType
                 'attr' => [
                     'autocomplete' => 'new-password',
                     'placeholder' => 'Password',
-                    'class' => 'rounded'
+                    'class' => 'form-control'
                     ],
+                'label_attr' => [
+                    'class' => 'form-label'
+                ],
                 'constraints' => [
                     new NotBlank([
                         'message' => 'Please enter a password',

@@ -3,13 +3,14 @@
         "@babel/core": "^7.17.0",
         "@babel/preset-env": "^7.16.0",
         "@symfony/webpack-encore": "^4.4.0",
-        "@tailwindcss/forms": "^0.5.6",
         "autoprefixer": "^10.4.15",
+        "bootstrap": "^5.3.2",
         "core-js": "^3.23.0",
-        "postcss": "^8.4.29",
         "postcss-loader": "^7.3.3",
         "regenerator-runtime": "^0.13.9",
-        "tailwindcss": "^3.3.3",
+        "sass": "^1.67.0",
+        "sass-loader": "^13.0.0",
+        "style-loader": "^3.3.3",
         "webpack": "^5.74.0",
         "webpack-cli": "^4.10.0",
         "webpack-notifier": "^1.15.0"
@@ -21,5 +22,9 @@
         "dev": "encore dev",
         "watch": "encore dev --watch",
         "build": "encore production --progress"
+    },
+    "dependencies": {
+        "@popperjs/core": "^2.11.8",
+        "bootstrap-icons": "^1.11.1"
     }
 }
