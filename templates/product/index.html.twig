@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProductController!{% endblock %}
+
+{% block body %}
+
+    <div class="container mt-5">
+        <h3 class="text-decoration-underline mb-5"> Our Products </h3>
+
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+            {% for product in products %}
+                <div class="">
+                    <img src="{{ asset('assets/image/work-life.jpg') }}" class="card-img-top" alt="Image du produit">
+                    <div class="card-body">
+                        <p class="card-title mt-2">{{ product.title }}</p>
+                        <p class="fw-medium">{{ product.price }} XOF</p>
+                    </div>
+                </div>
+
+            {% endfor %}
+        </div>
+
+    </div>
+
+{% endblock %}

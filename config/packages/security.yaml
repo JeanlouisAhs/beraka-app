@@ -21,7 +21,7 @@ security:
                 path: app_logout
                 # where to redirect after logout
                 target: app_login
-            user_checker: App\Security\UserConfirmation
+            #user_checker: App\Security\UserConfirmation
 
             remember_me:
                 secret: '%kernel.secret%'

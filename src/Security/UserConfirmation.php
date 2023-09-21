@@ -15,17 +15,18 @@ class UserConfirmation implements UserCheckerInterface
             return;
         }
 
+        if ($user->isIsVerified()) {
+            // the message passed to this exception is meant to be displayed to the user
+            throw new CustomUserMessageAccountStatusException("Your user account is not verified. 
+            Please check your email and confirm your account before {$user->getTokenRegistrationLifeTime()->format('d-m-Y-H-i')}");
+        }
+
     }
 
     public function checkPostAuth(UserInterface $user): void
     {
         if (!$user instanceof User) {
             return;
-        }
-        if ($user->isIsVerified()) {
-            // the message passed to this exception is meant to be displayed to the user
-            throw new CustomUserMessageAccountStatusException("Your user account is not verified. 
-            Plesae check your email and confirm your account before {$user->getTokenRegistrationLifeTime()->format('d-m-Y-H-i')}");
         }
 
         // user account is expired, the user may be notified
