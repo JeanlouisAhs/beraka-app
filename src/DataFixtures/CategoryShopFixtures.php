@@ -24,7 +24,7 @@ class CategoryShopFixtures extends Fixture
             ],
             3=>[
                 'name'=>'Outerwear',
-                'slug'=>'Outerwear',
+                'slug'=>'outerwear',
                 'description'=>'Outerwear',
             ],
             4=>[
@@ -45,6 +45,8 @@ class CategoryShopFixtures extends Fixture
             $category->setSlug($value['slug']);
             $category->setDescription($value['description']);
             $manager->persist($category);
+
+            $this->addReference('categoryshop_' . $key, $category);
         }
 
         $manager->flush();

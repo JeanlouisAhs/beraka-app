@@ -7,3 +7,16 @@ body {
     margin: 0;
     padding: 0;
 }
+
+.login-background {
+    background-image: url('../../public/assets/images/login-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.register-background {
+    background-image: url('../../public/assets/images/register-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
