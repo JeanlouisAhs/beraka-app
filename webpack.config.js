@@ -8,7 +8,7 @@ if (!Encore.isRuntimeEnvironmentConfigured()) {
 
 Encore
     // directory where compiled assets will be stored
-    .setOutputPath('public/assets/')
+    .setOutputPath('public/assets')
     // public path used by the web server to access the output path
     .setPublicPath('/assets')
     .enablePostCssLoader()
