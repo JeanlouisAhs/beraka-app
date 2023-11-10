@@ -8,17 +8,23 @@
         <h3 class="text-decoration-underline mb-5"> Our Products </h3>
 
         <div class="row">
-                {% for product in products %}
-                    <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
-                        <img src="{{ product.attachment }}" class="card-img-top" alt="Image du produit">
-                        <div class="card-body">
-                            <p class="card-title mt-2 ">{{ product.title }}</p>
-                            <p class="fw-bolder ">{{ product.price }} XOF</p>
-                        </div>
-                    </div>
-                {% endfor %}
-        </div>
+            {% for product in products %}
+                <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+                    <img src="{{ product.attachment }}" class="card-img-top" alt="Image du produit">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center ">
+                            <p class="fw-medium mt-2 ">{{ product.title }}</p>
 
+                            <a href="{{ path('card_add',{id:product.id}) }}" class="d-block p-2">
+                               +
+                            </a>
+                        </div>
+
+                        <p class="fw-bolder ">{{ product.price }} XOF</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
 
 
     </div>

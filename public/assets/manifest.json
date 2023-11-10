@@ -1,9 +1,0 @@
-{
-  "assets/app.js": "http://localhost:8080/assets/app.js",
-  "assets/runtime.js": "http://localhost:8080/assets/runtime.js",
-  "assets/vendors-node_modules_bootstrap_dist_js_bootstrap_esm_js-node_modules_webpack-dev-server_clien-45e195.js": "http://localhost:8080/assets/vendors-node_modules_bootstrap_dist_js_bootstrap_esm_js-node_modules_webpack-dev-server_clien-45e195.js",
-  "assets/app.css": "http://localhost:8080/assets/app.css",
-  "assets/vendors-node_modules_bootstrap_dist_js_bootstrap_esm_js-node_modules_mini-css-extract-plugin_-a95a48.js": "http://localhost:8080/assets/vendors-node_modules_bootstrap_dist_js_bootstrap_esm_js-node_modules_mini-css-extract-plugin_-a95a48.js",
-  "assets/images/login-bg.jpg": "http://localhost:8080/assets/images/login-bg.55b32128.jpg",
-  "assets/images/register-bg.jpg": "http://localhost:8080/assets/images/register-bg.26693a25.jpg"
-}
